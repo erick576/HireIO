@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+    web:
+        build: ./app
+        image: main-image
+        ports:
+            - 5000:5000
+        command: /usr/local/bin/gunicorn -b :5000 main:app
+
+    redis:
+        image: redis
+        ports:
+          - 6379:6379
+          
+    worker:
+        image: main-image
+        depends_on:
+            - redis
+        command: rqworker --name worker --url redis://redis:6379/0
+

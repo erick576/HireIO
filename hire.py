@@ -114,6 +114,8 @@ new_data = final_database2.iloc[:,1:]
 new_data.index = final_database2['Candidate Name']
 #execute the below line if you want to see the candidate profile in a csv format
 sample2=new_data.to_csv('candidates.csv')
+
+
 import matplotlib.pyplot as plt
 plt.rcParams.update({'font.size': 10})
 ax = new_data.plot.barh(title="Resume keywords by category", legend=False, figsize=(25,7), stacked=True)

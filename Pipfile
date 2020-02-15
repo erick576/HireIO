@@ -10,6 +10,12 @@ pypdf2 = "*"
 pandas = "*"
 spacy = "*"
 matplotlib = "*"
+redis = "*"
+flask = "*"
+flask-rq2 = "*"
+gunicorn = "*"
+rq-dashboard = "*"
+simplejson = "*"
 
 [requires]
 python_version = "3.6"
