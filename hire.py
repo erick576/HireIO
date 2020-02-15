@@ -41,23 +41,25 @@ def create_profile(file):
     text = text.replace("\\n", "")
     text = text.lower()
     #below is the csv where we have all the keywords, you can customize your own
-    keyword_dict = pd.read_csv('template_new.csv')
-    stats_words = [nlp(text) for text in keyword_dict['Statistics'].dropna(axis = 0)]
-    NLP_words = [nlp(text) for text in keyword_dict['NLP'].dropna(axis = 0)]
-    ML_words = [nlp(text) for text in keyword_dict['Machine Learning'].dropna(axis = 0)]
-    DL_words = [nlp(text) for text in keyword_dict['Deep Learning'].dropna(axis = 0)]
-    R_words = [nlp(text) for text in keyword_dict['R Language'].dropna(axis = 0)]
-    python_words = [nlp(text) for text in keyword_dict['Python Language'].dropna(axis = 0)]
-    Data_Engineering_words = [nlp(text) for text in keyword_dict['Data Engineering'].dropna(axis = 0)]
-
+    keyword_dict = pd.read_csv('buzzwords.csv')
+    ml_engineer = [nlp(text) for text in keyword_dict['machine learning engineering'].dropna(axis = 0)]
+    r_dev = [nlp(text) for text in keyword_dict['r developer'].dropna(axis = 0)]
+    py_dev = [nlp(text) for text in keyword_dict['python developer'].dropna(axis = 0)]
+    nlp_dev = [nlp(text) for text in keyword_dict['nlp developer'].dropna(axis = 0)]
+    java_dev = [nlp(text) for text in keyword_dict['java developer'].dropna(axis = 0)]
+    cloud = [nlp(text) for text in keyword_dict['cloud engineer'].dropna(axis = 0)]
+    devops = [nlp(text) for text in keyword_dict['devops'].dropna(axis = 0)]
+    data_eng =[nlp(text) for text in keyword_dict['data engineer'].dropna(axis = 0)]
+    
     matcher = PhraseMatcher(nlp.vocab)
-    matcher.add('Stats', None, *stats_words)
-    matcher.add('NLP', None, *NLP_words)
-    matcher.add('ML', None, *ML_words)
-    matcher.add('DL', None, *DL_words)
-    matcher.add('R', None, *R_words)
-    matcher.add('Python', None, *python_words)
-    matcher.add('DE', None, *Data_Engineering_words)
+    matcher.add('ML', None, *ml_engineer)
+    matcher.add('R', None, *r_dev)
+    matcher.add('Python', None, *py_dev)
+    matcher.add('NLP', None, *nlp_dev)
+    matcher.add('Java', None, *java_dev)
+    matcher.add('cloud', None, *cloud)
+    matcher.add('devops', None, *devops)
+    matcher.add('data engineer', None, *data_eng)
     doc = nlp(text)
     
     d = []  
