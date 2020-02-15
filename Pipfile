@@ -11,6 +11,7 @@ pandas = "*"
 matplotlib = "*"
 spacy = "*"
 numpy = "*"
+pymongo = "*"
 
 [requires]
 python_version = "3.6"
