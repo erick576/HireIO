@@ -1,13 +1,21 @@
-Statistics,Machine Learning,Deep Learning,R Language,Python Language,NLP,Data Engineering
-forecasting,xgboost,tensorflow,r,python,nlp,java
-markov chain,svm,keras,ggplot,flask,natural language processing,docker
-monte carlo,decision trees,pytorch,shiny,django,topic modeling,kubernetes
-,,neural network,cran,pandas,spacy,
-,,,,numpy,doc2vec,
-,,,,scikitlearn,chat bot,
-,,,,sklean,sentiment analysis,
-,,,,sci-py,,
-,,,,matplotlib,,
-,,,,bokeh,,
-,,,,statsmodel,,
-,,,,koa,,
+Machine Learning/Deep Learning,R Language,Python Language,NLP,Java Language,Cloud Engineering
+forecasting,r,python,nlp,java,AWS
+markov chain,ggplot,flask,natural language processing,Spring,Amazon Web Services
+monte carlo,shiny,django,topic modeling,Spring Boot,Google Cloud Platform
+xgboost,cran,pandas,spacy,Hibernate,DynamoDB
+svm,Shogun,numpy,doc2vec,Maven,Amazon Lex
+decision trees,Theano,scikitlearn,chat bot,Gradle,Lamba
+tensorflow,Torch,sklean,sentiment analysis,Jhipster,Cloud Computing
+keras,Caffe,sci-py,Dynet,Vaadin,Cloud Servic Models
+pytorch,Syberia,matplotlib,Keras,Play,Deployment Model
+neural network,,bokeh,Nlpnet,Struts,Microsoft Azure
+Sonnet,,statsmodel,Pytorch,Google Web Toolkit,Xen
+MXNet,,koa,SpaCy,OOP,KVM
+Gluon,,OOP,Tensorflow,,Vmware
+Swift,,,,,
+Chainer,,,,,
+DL4j,,,,,
+ONNX,,,,,
+Caffe,,,,,
+Sckit-Learn,,,,,
+Apache Spark,,,,,
